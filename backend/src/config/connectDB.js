@@ -1,6 +1,5 @@
 const { Sequelize } = require('sequelize');
 
-// Option 2: Passing parameters separately (sqlite)
 const sequelize = new Sequelize('bookingcare', 'root', null, {
   host: 'localhost',
   dialect: 'mysql',
