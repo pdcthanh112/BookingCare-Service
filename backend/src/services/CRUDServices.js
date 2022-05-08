@@ -5,7 +5,7 @@ let createNewUser = async (data) => {
   return new Promise(async (resolve, reject) => {
     try {
       let hashPasswordFromBcrypt = await hashUserPassword(data.password);
-      db.User.create({
+      await db.User.create({
         email: data.email,
         password: hashPasswordFromBcrypt,
         firstName: data.firstName,
